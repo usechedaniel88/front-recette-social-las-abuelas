@@ -7,7 +7,7 @@ import { GlobalStyles } from "./Global.style";
 function App() {
   return (
     <BrowserRouter>
-    <GlobalStyles /> 
+   
     <Routes>
         <Route path="/" element={<StartPage />} />
         <Route element={<Layout/>}>
