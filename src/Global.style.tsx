@@ -4,7 +4,8 @@ export const theme = {
   green: '#46CC8D', 
   background: 'rgba(176, 231, 201, 0.11)', 
   red: '#FB2B3A',
-  gray: '#B7B7B7',  
+  gray: '#B7B7B7', 
+  grayText: '#838383' 
 }
 
 export const GlobalStyles = createGlobalStyle`
