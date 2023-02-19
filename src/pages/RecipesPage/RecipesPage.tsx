@@ -1,4 +1,4 @@
-import {AddRecipeButton, RecipeActionRow} from '../../components'
+import {AddRecipeButton} from '../../components'
 
 type Props = {}
 
@@ -11,7 +11,7 @@ const RecipesPage = (props: Props) => {
         <h3>"Aqui van las recetas"</h3>
         <h3>"Aqui van las recetas"</h3>
         <h3>"Aqui van las recetas"</h3>
-        <RecipeActionRow></RecipeActionRow>
+
     </div>
   )
 }

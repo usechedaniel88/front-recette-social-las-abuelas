@@ -6,12 +6,13 @@ export const RecipeActionButtonStyled = styled.div`
     width: 100px;
     height: 100px;
     border-radius: 20px;
-    color: ${theme.grayText};
-    font-size: 0.75rem;
+    color: ${theme.GrayText};
     text-align: center;
-    border: red solid 1px;
+    border: ${theme.lightRed} solid 1px;
     /* rgba(${theme.red}, 0.35) */
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 10px;
+    gap:5px;
 `
