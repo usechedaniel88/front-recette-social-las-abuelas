@@ -1,6 +1,6 @@
 import React from 'react'
-
-import { IconDiv, IconText } from './NavIcon.style'
+import { SmallGrayText } from '../../Global.style'
+import { IconDiv, IconImg } from './NavIcon.style'
 
 type Props = {
     img: string, 
@@ -9,8 +9,10 @@ type Props = {
 export const NavIcon = (props : Props) => {
   return (
     <IconDiv>
-        <img src={props.img} alt="" />
-        <IconText> { props.text }</IconText>
+        <IconImg src={props.img} alt="" />
+        <SmallGrayText> { props.text }</SmallGrayText>
     </IconDiv>
   )
 }
+
+export default NavIcon

@@ -3,17 +3,13 @@ import React from "react";
 
  
 export const FooterNav = styled.div`
-width:100%;
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-text-decoration: none;
-background-color: red;
-position: fixed;
-bottom:0px;
-padding:20px
-`
-
-export const Linko = styled.link`
-text-decoration: none;
+    width:100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom:0px;
+    background-color: white;
 `

@@ -1,11 +1,18 @@
 import styled from "styled-components"
+
+
 export const IconDiv = styled.div`
-diplay:flex;
-flex-direction:column;
-justify-content:center;
-text-align: center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    width: 65px;
+    height: 65px;
+    gap: 5px
 `
 
-export const IconText = styled.p`
-color:rgba(183, 183, 183, 1);
+export const IconImg = styled.img`
+    width: 40px;
+    height: 40px
 `

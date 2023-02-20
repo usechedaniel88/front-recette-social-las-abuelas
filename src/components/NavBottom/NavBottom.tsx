@@ -11,17 +11,10 @@ type Props = {}
 const NavBottom = (props: Props) => {
   return (
     <FooterNav>
-     <Link style={{ textDecoration: 'none'}} to="/home-social"><NavIcon
-img={Home}
-text='home'
-/></Link>
-<Link style={{ textDecoration: 'none'}} to="/statistic"><NavIcon
-img={Stats}
-text='Statistic' 
-/></Link>
-<Link  style={{ textDecoration: 'none'}} to="/recipes"><NavIcon 
-img={Recipes}
-text='Recipes'/></Link> 
+      
+      <Link to="/home-social"><NavIcon img={Home} text='Home' /></Link>
+      <Link to="/statistic"><NavIcon img={Stats} text='Statistic'/></Link>
+      <Link to="/recipes"><NavIcon img={Recipes} text='Recipes'/></Link> 
       
     </FooterNav>
   )

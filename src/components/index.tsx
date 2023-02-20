@@ -5,3 +5,4 @@ export { default as ProfileButtons } from '../components/ProfileButtons/ProfileB
 export { default as RegisterButton } from '../components/RegisterButton/RegisterButton';
 export { default as RecipeActionButton } from '../components/RecipeActionButton/RecipeActionButton';
 export { default as Spacer } from '../components/Spacer/Spacer';
+export { default as NavIcon } from '../components/NavIcon/NavIcon';

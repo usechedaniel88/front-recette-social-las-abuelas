@@ -11,6 +11,7 @@ export const RecipeActionButtonStyled = styled.div`
     border: ${theme.lightRed} solid 1px;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     padding: 10px;
     gap:5px;

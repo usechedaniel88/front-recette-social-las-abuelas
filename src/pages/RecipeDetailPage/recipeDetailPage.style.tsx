@@ -2,10 +2,10 @@ import styled from "styled-components";
 import { theme } from "../../Global.style";
 
 export const TagDiv = styled.div`
-  padding: 7px 20px; 
+  padding: 7px 20px 6px 20px; 
   background-color: ${theme.green};
   color: white; 
-  font-weight: 100;
+  font-weight: 400;
   object-fit: contain;
   border-radius: 20px;
 `
