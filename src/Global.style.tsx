@@ -22,6 +22,6 @@ export const GlobalStyles = createGlobalStyle`
 body{
   background-color: ${theme.background};
   overflow: hidden;
-  font-family: 'Manjari', sans-serif;
 }
 `
+
