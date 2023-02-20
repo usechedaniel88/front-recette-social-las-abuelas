@@ -13,6 +13,7 @@ const RecipesPage = (props: Props) => {
         <h3>"Aqui van las recetas"</h3>
         <h3>"Aqui van las recetas"</h3>
         <h3>"Aqui van las recetas"</h3>
+
     </div>
   )
 }
