@@ -25,8 +25,16 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Manjari', sans-serif;
   }
 
+  h1{
+    font-size: 2.25rem;
+    color: ${theme.red};
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
   h3{
-    font-size: 1.60rem;;
+    font-size: 1.60rem;
     color: ${theme.darkText};
     font-weight: 400;
     margin-bottom: 0.60rem;
