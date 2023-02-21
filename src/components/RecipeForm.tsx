@@ -12,7 +12,7 @@ function RecipeForm() {
     return (
     <div>
         <form action="">
-            <input type="text" placeholder="Recipe name" />
+            <input type="text" placeholder="Recipe names" />
             <input type="text" placeholder="Instructions" />
             <label><input type="number" placeholder="Time to prepare" />min</label>
             <p>Select Ingredients:</p>
