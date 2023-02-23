@@ -1,5 +1,5 @@
 import image from '../../assets/images/vegetables-and-salmon.png';
-
+import RecipeCard from '../../components/RecipeCard/RecipeCard';
 import { Container, StyleH1, StyleImage } from './homeSocialPage.style';
 
 
@@ -15,6 +15,7 @@ const SocialPage = (props: Props) => {
         <StyleH1>Let’s get cooking!</StyleH1>
         <Container>
         <h4>New recipes this week:</h4>
+        <RecipeCard/>
         </Container>
     </> 
   )

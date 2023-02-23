@@ -34,6 +34,7 @@ export const DivButton = styled.div`
 export const H1Text = styled.h1`
 font-family: 'Allura', cursive;
 font-size: 2rem;
+color: white;
 `
 export const H2Text = styled.h2`
 font-family: 'Manjari', sans-serif;

@@ -46,6 +46,13 @@ export const GlobalStyles = createGlobalStyle`
     font-weight: 400;
     margin-bottom: 0.60rem;
   }
+
+  h5{
+    font-size: 1rem;
+    color: ${theme.darkText};
+    font-weight: 400;
+    margin-bottom: 0.60rem;
+  }
 `
 
 // -------------- GENERAL CONTAINER STYLES ---------------
