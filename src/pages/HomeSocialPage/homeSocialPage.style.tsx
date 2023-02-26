@@ -10,4 +10,8 @@ text-align: center;
 
 export const Container = styled.div`
 padding: 0 1.5rem;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: center;
 `

@@ -13,8 +13,11 @@ const SocialPage = (props: Props) => {
         <StyleImage src={image} alt="imagen vegetables-and-salmon" />
       </div>
         <StyleH1>Let’s get cooking!</StyleH1>
-        <Container>
         <h4>New recipes this week:</h4>
+        <Container>
+        <RecipeCard/>
+        <RecipeCard/>
+        <RecipeCard/>
         <RecipeCard/>
         </Container>
     </> 
