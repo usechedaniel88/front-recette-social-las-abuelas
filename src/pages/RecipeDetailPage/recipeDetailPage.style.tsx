@@ -19,12 +19,12 @@ export const BlueDiv = styled.div`
     justify-content: center;
     border-radius: 20px;
     background-color: ${theme.lightBlueBackground};
-    gap: 5px
+    gap: 5px;
 `
 
 export const GreenOutlineDiv = styled(BlueDiv)`
     background-color: white;
-    border: 1px solid ${theme.green}
+    border: 1px solid ${theme.green};
 `
 
 export const GrayDiv = styled(BlueDiv)`
