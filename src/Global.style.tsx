@@ -81,7 +81,7 @@ export const RowLeft = styled.div`
 
 export const RowCentered = styled(RowLeft)`
   justify-content:center; 
-  justify-content: space-between;
+  
 `
 
 /* ---------- GENERAL ICON STYLES --------------- */

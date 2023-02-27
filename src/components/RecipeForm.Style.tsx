@@ -1,20 +1,77 @@
 import styled from "styled-components";
 import { theme } from "../Global.style";
 
+export const Hh1 = styled.h1`
+color: red;
 
 
-
-export const InputGrayDiv = styled.input`
-    display: flex;
-    background-color: ${theme.gray};
-    border-radius: 20px;
-    margin: 10px auto;
-    padding: 10px 20px;
-    gap:7px;
 `
 
+export const Form = styled.form`
+ width : 100%;
+
+
+`
+
+
+export const Input = styled.input`
+    
+    background-color: ${theme.gray};
+    border-radius: 20px;
+    margin-left:0px;
+    width:100%;
+    padding: 10px 20px;
+    gap:7px;
+    border: none;
+    color: ${theme.GrayText}; 
+  line-height: 140%;
+`
+export const  InputTextArea= styled.input`
+width:100%;
+height:200px;
+background-color: ${theme.gray};
+border-radius: 20px;
+margin-left:0px;
+width:100%;
+padding: 10px 20px;
+gap:7px;
+border: none;
+color: ${theme.GrayText}; 
+line-height: 140%;3
+
+`
+
+export const  InputTime= styled.input`
+width:40% !important;
+background-color: ${theme.gray};
+border-radius: 20px;
+margin-left:0px;
+width:100%;
+padding: 10px 20px;
+gap:7px;
+border: none;
+color: ${theme.GrayText}; 
+line-height: 140%;
+margin-right: 20px;
+
+`
+
+export const  InputQuantity= styled.input`
+width:50% !important;
+background-color: ${theme.gray};
+border-radius: 20px;
+margin-left:0px;
+width:100%;
+padding: 10px 20px;
+gap:7px;
+border: none;
+color: ${theme.GrayText}; 
+line-height: 140%;
+margin-right: 20px;
+ `
 export const CheckBoxWrapper = styled.div`
   position: relative;
+ 
 `;
 export const CheckBoxLabel = styled.label`
   position: absolute;
@@ -37,6 +94,20 @@ export const CheckBoxLabel = styled.label`
     transition: 0.2s;
   }
 `;
+
+export const RowCenter = styled.div`
+display:flex;
+  justify-content:center; 
+  margin: 10px;
+  
+`
+
+
+
+
+
+
+  
 export const CheckBox = styled.input`
   opacity: 0;
   z-index: 1;
