@@ -1,15 +1,22 @@
-import RegisterButton from '../../components/RegisterButton/RegisterButton'
+import { Link } from 'react-router-dom'
+import OkButton from '../../components/OkButton/OkButton'
+import { Container } from '../../Global.style'
+import { FormContainer, LinkForgot, LinkRegister, LoginInput, TextLabel } from './loginPage.style'
 
 type Props = {}
 
 const LoginPage = (props: Props) => {
   return (
-    <div>
-        <h1>Login Page</h1>
-        <h2>"Aqui va el formulario de login"</h2>
-        <p>If you are new to La Recette</p>
-        <RegisterButton/>
-    </div>
+    <Container>
+      <FormContainer>
+      <TextLabel>Login:</TextLabel>
+      <LoginInput type="text" name="username" placeholder="Username"/>
+      <LoginInput type="password" name="password" placeholder="Password"/>
+      <LinkForgot to={""}>Forgot your password? </LinkForgot>
+      <OkButton title={'Inicia sesión'}/>
+    </FormContainer>
+    <p>Not a member yet?<LinkRegister to={'/register'}> Register now!</LinkRegister></p>
+     </Container>
   )
 }
 
