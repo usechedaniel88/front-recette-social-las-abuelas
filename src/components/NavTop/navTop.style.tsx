@@ -3,7 +3,8 @@ import styled from "styled-components";
 import { theme } from "../../Global.style";
 
 export const NavTopStyled = styled.div`
-    position: fixed;
+    position: -webkit-sticky; /*Fixed*/
+    position: sticky;
     top:0px;
     padding:20px; 
     background-color: white;
@@ -12,6 +13,7 @@ export const NavTopStyled = styled.div`
     width:100%;
     height: 80px;
     align-items: center;
+    z-index: 2;
 `
 
 export const Logo = styled(Link)`
