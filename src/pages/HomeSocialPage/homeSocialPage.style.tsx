@@ -8,10 +8,21 @@ export const StyleH1 = styled.h1`
 text-align: center;
 `
 
-export const Container = styled.div`
+export const ContainerHome = styled.div`
 padding: 0 1.5rem;
 display: flex;
 flex-wrap: wrap;
 justify-content: space-between;
 align-items: center;
+`
+
+export const ContainerTypeRecipeCard = styled.div`
+ display: flex;
+  flex-direction: row;
+  justify-content: center;
+`
+
+export const H4Home = styled.h4`
+    margin-left: 33px;
+    margin-top: 15px;
 `

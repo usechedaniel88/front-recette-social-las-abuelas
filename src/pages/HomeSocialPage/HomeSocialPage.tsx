@@ -1,8 +1,11 @@
 import image from '../../assets/images/vegetables-and-salmon.png';
 import RecipeCard from '../../components/RecipeCard/RecipeCard';
-import { Container, StyleH1, StyleImage } from './homeSocialPage.style';
-
-
+import TypeRecipeCard from '../../components/TypeRecipeCard/TypeRecipeCard';
+import { ContainerHome, ContainerTypeRecipeCard, H4Home, StyleH1, StyleImage } from './homeSocialPage.style';
+import GlutenImage from '../../assets/icons/gluten-free-green.png'
+import VeganImage from '../../assets/icons/vegetarian-green.png'
+import BreakfastImage from '../../assets/icons/breakfast-green.png'
+import DinnerImage from '../../assets/icons/dinner-green.png'
 
 type Props = {}
 
@@ -12,15 +15,24 @@ const SocialPage = (props: Props) => {
       <div>
         <StyleImage src={image} alt="imagen vegetables-and-salmon" />
       </div>
+      
         <StyleH1>Let’s get cooking!</StyleH1>
-        <h4>New recipes this week:</h4>
-        <Container>
+        <H4Home>New recipes this week:</H4Home>
+        <ContainerHome>
         <RecipeCard/>
         <RecipeCard/>
         <RecipeCard/>
         <RecipeCard/>
-        </Container>
-    </> 
+        </ContainerHome>
+        <H4Home>What type of recipe are you looking for?</H4Home>
+        <ContainerTypeRecipeCard>
+        <TypeRecipeCard src={VeganImage} title={'Vegan'}/>
+        <TypeRecipeCard src={GlutenImage} title={'Gluten free'}/>
+        <TypeRecipeCard src={BreakfastImage} title={'Breakfast'}/>
+        <TypeRecipeCard src={DinnerImage} title={'Dinner'}/>
+          </ContainerTypeRecipeCard>  
+        
+         </> 
   )
 }
 
