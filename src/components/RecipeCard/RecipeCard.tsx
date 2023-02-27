@@ -1,21 +1,26 @@
-import React from 'react'
-import star  from '../../assets/icons/star-yellow.png'
-import { RecipeAutor, RecipeContainer, RecipeDetails, RecipeInfo, StarContainer, ViewsContainer } from './recipeCard.style'
 
-type Props = {}
+import star  from '../../assets/icons/star-yellow.png'
+import { RecipeAutor, RecipeContainer, RecipeDetails, RecipeInfo, StarContainer, StarImage,  ViewsContainer } from './recipeCard.style'
+
+type Props = {
+  recipeName: string;
+  by: string;
+  views: number;
+  califications: number;
+}
 
 const RecipeCard = (props: Props) => {
   return (
     <RecipeContainer>
-        <h5>Vegan brownies</h5>
-        <RecipeAutor>by Hel Aige</RecipeAutor>
+        <h5>{props.recipeName}</h5>
+        <RecipeAutor>by {props.by}</RecipeAutor>
         <RecipeInfo>
             <ViewsContainer>
-                <RecipeDetails>100 views</RecipeDetails>
+                <RecipeDetails>{props.views} views</RecipeDetails>
             </ViewsContainer>
             <StarContainer>
-            <img src={star} alt='star' width='20px' height='20px'/>
-            <RecipeDetails>3.5</RecipeDetails>
+            <StarImage src={star} alt='star'/>
+            <RecipeDetails>{props.califications}</RecipeDetails>
             </StarContainer>
         </RecipeInfo>
         

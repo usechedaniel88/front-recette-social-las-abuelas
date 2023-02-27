@@ -19,10 +19,10 @@ const SocialPage = (props: Props) => {
         <StyleH1>Let’s get cooking!</StyleH1>
         <H4Home>New recipes this week:</H4Home>
         <ContainerHome>
-        <RecipeCard/>
-        <RecipeCard/>
-        <RecipeCard/>
-        <RecipeCard/>
+        <RecipeCard recipeName={'Vegan brownies'} by={'Hel Aige'} views={100} califications={3.5}/>
+        <RecipeCard recipeName={'Chocolate cake'} by={'Fabio'} views={50} califications={4.9}/>
+        <RecipeCard recipeName={'Spicy guacamole'} by={'Daniel Useche'} views={35} califications={4.2}/>
+        <RecipeCard recipeName={'Summer salad'} by={'Rosie2345'} views={12} califications={2.1}/>
         </ContainerHome>
         <H4Home>What type of recipe are you looking for?</H4Home>
         <ContainerTypeRecipeCard>

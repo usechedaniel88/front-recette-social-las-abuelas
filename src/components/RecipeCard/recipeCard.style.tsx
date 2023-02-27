@@ -36,6 +36,9 @@ export const RecipeAutor = styled.p`
 export const RecipeDetails = styled.span`
     color: ${theme.GrayText};
     font-size: 0.75rem;
-    padding: 10px;
+    padding: 15px;
 `
-
+export const StarImage = styled.img`
+width:20px;
+ height:20px;
+`
