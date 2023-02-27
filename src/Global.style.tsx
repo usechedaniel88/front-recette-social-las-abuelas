@@ -61,6 +61,7 @@ export const RowLeft = styled.div`
   display: flex;
   gap: 10px;
   margin: 15px 0;
+  
 `
 
 export const RowCentered = styled(RowLeft)`
