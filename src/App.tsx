@@ -21,7 +21,7 @@ function App() {
         <Route path="/favorites" element={<FavoritesPage />} />
         <Route path="/shopping-list" element={<ShoppingListPage />} />
         <Route path="/recipe-form" element={<RecipeFormPage />} />
-        <Route path="/recipe-detail" element={<RecipeDetailPage />} />
+        <Route path="/recipe-detail/:id" element={<RecipeDetailPage />} />
       </Route>
     </Routes>
     </BrowserRouter>

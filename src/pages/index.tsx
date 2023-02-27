@@ -4,7 +4,7 @@ export { default as Layout } from '../pages/Layout/Layout';
 export { default as LoginPage } from '../pages/LoginPage/LoginPage';
 export { default as MyRecipesPage } from '../pages/MyRecipesPage/MyRecipesPage';
 export { default as ProfilePage } from '../pages/ProfilePage/ProfilePage';
-export { default as RecipeDetailPage } from '../pages/RecipeDetailPage/RecipeDetailPage';
+export { default as RecipeDetailPage } from './RecipeDetail/RecipeDetail';
 export { default as RecipesPage } from '../pages/RecipesPage/RecipesPage';
 export { default as RegisterPage } from '../pages/RegisterPage/RegisterPage';
 export { default as ShoppingListPage } from '../pages/ShoppingListPage/ShoppingListPage';
