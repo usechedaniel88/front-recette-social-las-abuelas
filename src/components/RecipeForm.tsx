@@ -19,13 +19,12 @@ function RecipeForm() {
 
                 <h4>Create a recipe:</h4>
                 <Input type="text" placeholder="Recipe names" />
-                <Spacer size={10} axis='vertical' />
+                
                 <InputTextArea type="text" placeholder="Instructions" />
-                <Spacer size={10} axis='vertical' />
+                
                 <label><InputTime type="number" placeholder="Time to prepare" min='1' />min</label>
-                <Spacer size={10} axis='vertical' />
-                <h4>Select Ingredients:</h4>
-                <Spacer size={10} axis='vertical' />
+                
+
                 <RowCenter>
                     <p >Private </p>
                     <CheckBoxWrapper>
@@ -34,11 +33,14 @@ function RecipeForm() {
                     </CheckBoxWrapper>
                     <p> Public</p>
                 </RowCenter>
-                <Spacer size={10} axis='vertical' />
+                <h4>Select Ingredients:</h4>
+                
+              
+                
                 <Input type="search" placeholder="Search ingredient by name" />
-                <Spacer size={10} axis='vertical' />
+                
                 <label><InputQuantity type="number" placeholder="Quantity" />g</label>
-                <Spacer size={10} axis='vertical' />
+                
                 <Input type="search" placeholder="Search ingredient by name" />
             </Form>
 

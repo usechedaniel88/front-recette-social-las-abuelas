@@ -14,9 +14,7 @@ export const Form = styled.form`
 `
 
 
-export const Input = styled.input`
-    
-    background-color: ${theme.gray};
+export const Input = styled.input`   
     border-radius: 20px;
     margin-left:0px;
     width:100%;
@@ -25,25 +23,21 @@ export const Input = styled.input`
     border: none;
     color: ${theme.GrayText}; 
   line-height: 140%;
+  margin-bottom: 10px;
 `
 export const  InputTextArea= styled.input`
 width:100%;
 height:200px;
-background-color: ${theme.gray};
 border-radius: 20px;
 margin-left:0px;
-width:100%;
 padding: 10px 20px;
-gap:7px;
 border: none;
 color: ${theme.GrayText}; 
-line-height: 140%;3
-
+margin-bottom: 10px;
 `
 
 export const  InputTime= styled.input`
 width:40% !important;
-background-color: ${theme.gray};
 border-radius: 20px;
 margin-left:0px;
 width:100%;
@@ -53,21 +47,20 @@ border: none;
 color: ${theme.GrayText}; 
 line-height: 140%;
 margin-right: 20px;
-
+margin-bottom: 10px;
 `
 
 export const  InputQuantity= styled.input`
 width:50% !important;
-background-color: ${theme.gray};
 border-radius: 20px;
 margin-left:0px;
 width:100%;
 padding: 10px 20px;
-gap:7px;
 border: none;
 color: ${theme.GrayText}; 
 line-height: 140%;
 margin-right: 20px;
+margin-bottom: 10px;
  `
 export const CheckBoxWrapper = styled.div`
   position: relative;
@@ -98,7 +91,8 @@ export const CheckBoxLabel = styled.label`
 export const RowCenter = styled.div`
 display:flex;
   justify-content:center; 
-  margin: 10px;
+  gap: 20px;
+  margin-bottom: 20px;
   
 `
 
