@@ -3,16 +3,19 @@ import { theme } from "../../Global.style";
 
 
 export const ButtonContainer = styled.div`
-min-width: 199px;
+width: fit-content;
 display: flex;
 flex-direction: row;
 align-items: center;
 background-color: ${theme.red};
 border-radius: 25px;
 color: #FFFFFF;
-padding: 6px 13px;
+padding: 6px 20px;
 font-size: 20px;
-margin-top: 43px;
+margin: 0 auto  ;
+margin-top: 20px;
+
+
 `
 
 export const PText = styled.p`
