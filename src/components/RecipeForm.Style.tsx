@@ -1,14 +1,11 @@
 import styled from "styled-components";
 import { theme } from "../Global.style";
 
-export const Hh1 = styled.h1`
-color: red;
 
-
-`
 
 export const Form = styled.form`
  width : 100%;
+ margin-bottom:0px;
 
 
 `
