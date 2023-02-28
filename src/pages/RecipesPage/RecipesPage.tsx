@@ -1,5 +1,6 @@
+import AddButton from '../../components/AddButton/AddButton'
 import AddRecipeButton from '../../components/AddRecipeButton/AddRecipeButton'
-import Recipes from '../../components/Recipes'
+import Recipes from '../../components/RecipesListCard/Recipes'
 import { Container } from '../../Global.style'
 
 type Props = {}
@@ -9,12 +10,11 @@ const RecipesPage = (props: Props) => {
     <Container>
         <AddRecipeButton/>
         <h1>Recipes Page</h1>
-        <h2>"Aqui va el buscador"</h2>
+        <form action='/recipes' method='get'>
+          <input type="search" placeholder='Find recipes by name' />
+          <AddButton />
+        </form>
         <Recipes />
-        <h3>"Aqui van las recetas"</h3>
-        <h3>"Aqui van las recetas"</h3>
-        <h3>"Aqui van las recetas"</h3>
-
     </Container>
   )
 }

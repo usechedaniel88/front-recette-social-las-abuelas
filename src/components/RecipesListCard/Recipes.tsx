@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { GrayText, SmallGrayText, XLGrayText } from '../Global.style'
-import { BlueDiv, GrayDiv, GreenOutlineDiv, Div } from '../pages/RecipesPage/recipesPage.style'
-import recipesService from '../Services/recipesService'
-import star from '../assets/icons/star-yellow.png'
-import timer from '../assets/icons/timer-gray.png'
-import notFavorite from '../assets/icons/not-favorite-red.png'
-import RecipeActionButton from './RecipeActionButton/RecipeActionButton'
+import { GrayText, SmallGrayText } from '../../Global.style'
+import recipesService from '../../Services/recipesService'
+import star from '../../assets/icons/star-yellow.png'
+import timer from '../../assets/icons/timer-gray.png'
+import notFavorite from '../../assets/icons/not-favorite-red.png'
+import RecipeActionButton from '../RecipeActionButton/RecipeActionButton'
+import { Card, BlueDiv, GrayDiv, GreenOutlineDiv, Div } from './Recipes.style'
 
-type RecipesType = {id:string, title:string, description:string, author:any, time:number, score?:number}
+type RecipesType = {_id:string, title:string, description:string, author:any, time:number, score?:number}
 
 function Recipes() {
 
@@ -25,7 +25,7 @@ function Recipes() {
     <div>
         {recipes.map((recipe) => {
             return (
-                <div key={recipe.id}>
+                <Card key={recipe._id}>
                     <Link to={'../pages/RecipeDetailPage/RecipeDetailPage.tsx'}>
                         <h3>{recipe.title}</h3>
                         <RecipeActionButton img={notFavorite} text=''/>
@@ -45,7 +45,7 @@ function Recipes() {
                         <SmallGrayText>{recipe.time}min</SmallGrayText>
                     </GrayDiv>
                     </Div>
-                </div>
+                </Card>
             )
         })}
     </div>
