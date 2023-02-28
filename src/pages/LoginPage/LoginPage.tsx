@@ -13,7 +13,7 @@ const LoginPage = (props: Props) => {
       <LoginInput type="text" name="username" placeholder="Username"/>
       <LoginInput type="password" name="password" placeholder="Password"/>
       <LinkForgot to={""}>Forgot your password? </LinkForgot>
-      <OkButton title={'Inicia sesión'}/>
+      <OkButton title={'Log in!'}/>
     </FormContainer>
     <p>Not a member yet?<LinkRegister to={'/register'}> Register now!</LinkRegister></p>
      </Container>
