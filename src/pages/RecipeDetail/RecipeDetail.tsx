@@ -15,7 +15,7 @@ type Props = {}
 
 type Ingredient = {name:string, measure_unit: string}
 
-type RecipeDetailsType = {_id:string, title:string, description:string, author:string, time:number, tags: [string], ingredients: [Ingredient] }
+type RecipeDetailsType = {_id:string, title:string, description:string, author:string, username: string, time:number, tags: [string], ingredients: [Ingredient] }
 
 
 function RecipeDetailPage(props: Props)  {
@@ -41,7 +41,7 @@ function RecipeDetailPage(props: Props)  {
           <WhiteBackgroundDiv>
         
           <h3>{recipeDetails?.title}</h3>
-          <GrayText>by Hel Aige</GrayText>
+          <GrayText>by {recipeDetails?.username}</GrayText>
           
           <RowLeft>
             <TagDiv>Vegan</TagDiv>
