@@ -1,25 +1,35 @@
 import React, { useEffect, useState } from 'react'
 import { Container } from '../Global.style';
-import recipesFormService from '../Services/recipesFormService';
-import Spacer from './Spacer/Spacer';
 import { Input, Form, InputTextArea, InputTime, InputQuantity, CheckBoxWrapper, CheckBox, CheckBoxLabel, RowCenter } from './RecipeForm.Style'
 import OkButton from './OkButton/OkButton';
+import axios from 'axios';
 
- type Props = {}
+ 
 
-function RecipeForm( props : Props) {
-    const [recipesForm, setRecipesForm] = useState([])
+function RecipeForm( ) {
+    const [msg, setMsg] = useState('')
+     
+    const submit = async (e: any) => { 
+        e.preventDefault();
 
-    useEffect(() => {
+        try{ 
 
-    }, [])
+            await axios.post('http://localhost:3000/', {msg})
+        }
+        catch(e){
+           console.log(e);
+        }
+        
+    }
+   
     return (
         <Container>
 
-            <Form action="">
+            <Form action="POST">
 
                 <h4>Create a recipe:</h4>
-                <Input type="text" placeholder="Recipe names" />
+                
+                <Input type="text" placeholder="Recipe names" onChange={ e => {setMsg(e.target as HTMLFormElement).value}}/>
 
                 <InputTextArea type="text" placeholder="Instructions" />
 
@@ -43,8 +53,8 @@ function RecipeForm( props : Props) {
                 <label><InputQuantity type="number" placeholder="Quantity" />g</label>
 
                 <Input type="search" placeholder="Search ingredient by name" />
-                <OkButton 
-                title = {'Post recipe!'}/>
+                <input type='submit'   onClick={submit} value='submit'
+                           />
             </Form>
 
         </Container>
