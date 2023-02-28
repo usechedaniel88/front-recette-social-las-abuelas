@@ -1,12 +1,8 @@
+import axios from 'axios'
+
 const apiBase = 'http://localhost:4000/api/v1/recipes'
 
-const recipeDetailsServices = {
-    getRecipeDetails(){
-        return fetch(apiBase)
-        .then((res)=>res.json())
-        .then((data)=> data.results); 
-
+export const recipeDetailsServices = async (id:string) => {
+        return await axios.get(apiBase + `/recipe/${id}`)
     }
-}
 
-export default recipeDetailsServices;

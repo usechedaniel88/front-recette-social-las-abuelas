@@ -8,32 +8,39 @@ import shoppingList from '../../assets/icons/shopping-list-red.png';
 import comments from '../../assets/icons/comments-red.png'
 import { BlueDiv, GrayDiv, GreenOutlineDiv, RecipeDetailGrayDiv, TagDiv } from './recipeDetail.style';
 import { useEffect, useState } from 'react';
-import recipeDetailsServices from '../../Services/recipeDetailsService';
+import {recipeDetailsServices} from '../../Services/recipeDetailsService';
+import { useParams } from 'react-router';
 
 type Props = {}
 
-type RecipeDetailsType = {id:string, title:string, description:string, author:string, time:number, tags: [string] }
+type Ingredient = {name:string, measure_unit: string}
+
+type RecipeDetailsType = {_id:string, title:string, description:string, author:string, time:number, tags: [string], ingredients: [Ingredient] }
 
 
 function RecipeDetailPage(props: Props)  {
 
-  const [recipeDetails, setRecipeDetails] = useState<RecipeDetailsType[]>([])
+  const [recipeDetails, setRecipeDetails] = useState<RecipeDetailsType>()
+
+  const params = useParams()
+  console.log(params)
 
   useEffect(() => {
-    recipeDetailsServices.getRecipeDetails().then((data) => {
-      setRecipeDetails(data);
-    })
+    const loadRecipeDetails = async () => {
+      if(params.id){
+      const recipeDetails = await recipeDetailsServices(params.id)
+      setRecipeDetails(recipeDetails.data);
+    }
+  }
+  loadRecipeDetails()
   }, [])
 
   return (
-  <>
-    {recipeDetails.map((recipeDetails) =>{
-      return(
-        <div key={recipeDetails.id}>
+    <div key={recipeDetails?._id}>
         <Container >
           <WhiteBackgroundDiv>
         
-          <h3>Vegan Brownies</h3>
+          <h3>{recipeDetails?.title}</h3>
           <GrayText>by Hel Aige</GrayText>
           
           <RowLeft>
@@ -96,10 +103,9 @@ function RecipeDetailPage(props: Props)  {
         
           </WhiteBackgroundDiv>
         </Container>
-        </div>
-     )
-    })}
-  </>  
+        
+     
+    </div>  
   )
 }
 
