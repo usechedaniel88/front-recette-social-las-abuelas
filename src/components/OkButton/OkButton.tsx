@@ -5,6 +5,7 @@ import { InputSubmit, PText } from './okButton.style'
 
 type Props = {
     title: string
+    onClick: any
 }
 
 const OkButton = (props: Props) => {
