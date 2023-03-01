@@ -25,6 +25,8 @@ function RecipeDetailPage(props: Props)  {
   const params = useParams()
   console.log(params)
 
+  const tagItems = recipeDetails?.tags.map(tag => <TagDiv>{tag}</TagDiv>)
+
   useEffect(() => {
     const loadRecipeDetails = async () => {
       if(params.id){
@@ -44,8 +46,7 @@ function RecipeDetailPage(props: Props)  {
           <GrayText>by {recipeDetails?.username}</GrayText>
           
           <RowLeft>
-            <TagDiv>Vegan</TagDiv>
-            <TagDiv>Dessert</TagDiv>
+            <TagDiv>{tagItems}</TagDiv>
           </RowLeft>
           
           <RowCentered>
@@ -59,14 +60,14 @@ function RecipeDetailPage(props: Props)  {
             </GreenOutlineDiv>
             <GrayDiv>
               <img src={timer} alt="" />
-              <GrayText>60 min</GrayText>
+              <GrayText>{recipeDetails?.time} min</GrayText>
             </GrayDiv>
           </RowCentered>
         
           <Spacer size={10} axis='vertical' />
       
           <h4>Instructions:</h4>
-          <GrayText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </GrayText>
+          <GrayText>{recipeDetails?.description}</GrayText>
         
           <Spacer size={20} axis='vertical' />
 
