@@ -15,7 +15,7 @@ type Props = {}
 
 type Ingredient = {name:string, measure_unit: string}
 
-type RecipeDetailsType = {_id:string, title:string, description:string, author:string, username: string, time:number, tags: [string], ingredients?: [Ingredient] }
+type RecipeDetailsType = {_id:string, title:string, description:string, author:string, username: string, time:number, tags: [string], ingredients?: [Ingredient], comments?: [any], stars: number }
 
 
 function RecipeDetailPage(props: Props)  {
@@ -26,7 +26,9 @@ function RecipeDetailPage(props: Props)  {
   console.log(params)
 
   const tagItems = recipeDetails?.tags.map(tag => <TagDiv>{tag}</TagDiv>)
-  const ingredientItems = recipeDetails?.ingredients?.map(ingredient => <TagDiv>{ingredient.name}+" "+{ingredient.measure_unit}</TagDiv>)
+  const blankSpace = " "
+  const ingredientItems = recipeDetails?.ingredients?.map(ingredient => <DarkText>{ingredient.name}{blankSpace}{ingredient.measure_unit}</DarkText>)
+  const starRating = recipeDetails?.comments?.map(comment => <GrayText>{comment.stars}</GrayText>)
 
   useEffect(() => {
     const loadRecipeDetails = async () => {
@@ -57,7 +59,7 @@ function RecipeDetailPage(props: Props)  {
             </BlueDiv>
             <GreenOutlineDiv>
               <img src={star} alt="" />
-              <GrayText>3.5</GrayText>
+              <GrayText>{starRating}</GrayText>
             </GreenOutlineDiv>
             <GrayDiv>
               <img src={timer} alt="" />
@@ -75,8 +77,6 @@ function RecipeDetailPage(props: Props)  {
           <h4>Ingredients:</h4>
           <RecipeDetailGrayDiv>
             <DarkText>{ingredientItems}</DarkText>
-            <DarkText>100</DarkText>
-            <DarkText>g</DarkText>
           </RecipeDetailGrayDiv>
           <RecipeDetailGrayDiv>
             <DarkText>Dark chocolate</DarkText>

@@ -8,11 +8,14 @@ import notFavorite from '../../assets/icons/not-favorite-red.png'
 import RecipeActionButton from '../RecipeActionButton/RecipeActionButton'
 import { Card, BlueDiv, GrayDiv, GreenOutlineDiv, Div } from './Recipes.style'
 
-type RecipesType = {_id:string, title:string, description:string, username:any, time:number, score?:number}
+type Props = {}
 
-function Recipes() {
+type RecipesType = {_id:string, title:string, description:string, username:any, time:number, score?:number }
+
+function Recipes(props: Props) {
 
     const [recipes, setRecipes] = useState<RecipesType[]>([])
+
 
     useEffect(() => {
         recipesService.getAll()
@@ -40,7 +43,7 @@ function Recipes() {
                     </BlueDiv>
                     <GreenOutlineDiv>
                         <img src={star} alt="" />
-                        <SmallGrayText>{recipe.score}</SmallGrayText>
+                        <SmallGrayText>3.5</SmallGrayText>
                     </GreenOutlineDiv>
                     <GrayDiv>
                         <img src={timer} alt="" />
