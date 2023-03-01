@@ -12,7 +12,7 @@ const RegisterPage = (props: Props) => {
       <LoginInput type="text" name="username" placeholder="Username"/>
       <LoginInput type="mail" name="password" placeholder="Email"/>
       <LoginInput type="password" name="password" placeholder="Password"/>
-      <OkButton title={'Log in!'}/>
+      <OkButton onClick={undefined}/>
     </FormContainer>
      </Container>
   )
