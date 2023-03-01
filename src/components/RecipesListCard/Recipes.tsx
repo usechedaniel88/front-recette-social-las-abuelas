@@ -8,7 +8,7 @@ import notFavorite from '../../assets/icons/not-favorite-red.png'
 import RecipeActionButton from '../RecipeActionButton/RecipeActionButton'
 import { Card, BlueDiv, GrayDiv, GreenOutlineDiv, Div } from './Recipes.style'
 
-type RecipesType = {_id:string, title:string, description:string, author:any, time:number, score?:number}
+type RecipesType = {_id:string, title:string, description:string, username:any, time:number, score?:number}
 
 function Recipes() {
 
@@ -27,10 +27,12 @@ function Recipes() {
             return (
                 <Card key={recipe._id}>
                     <Link to={'../pages/RecipeDetailPage/RecipeDetailPage.tsx'}>
+                        <Div>
                         <h3>{recipe.title}</h3>
                         <RecipeActionButton img={notFavorite} text=''/>
+                        </Div>
                     </Link>
-                    <GrayText>by {recipe.author}</GrayText>
+                    <GrayText>by {recipe.username}</GrayText>
                     <Div>
                     <BlueDiv>
                         <SmallGrayText>100</SmallGrayText>
