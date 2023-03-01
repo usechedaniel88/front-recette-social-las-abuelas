@@ -1,12 +1,20 @@
+import OkButton from "../../components/OkButton/OkButton"
+import { Container } from "../../Global.style"
+import { FormContainer, LinkForgot, LinkRegister, LoginInput, TextLabel } from "../LoginPage/loginPage.style"
 
 type Props = {}
 
 const RegisterPage = (props: Props) => {
   return (
-    <div>
-        <h1>Register Page</h1>
-        <h2>"Aqui va el formulario de register"</h2>
-    </div>
+    <Container>
+      <FormContainer>
+      <TextLabel>Register:</TextLabel>
+      <LoginInput type="text" name="username" placeholder="Username"/>
+      <LoginInput type="mail" name="password" placeholder="Email"/>
+      <LoginInput type="password" name="password" placeholder="Password"/>
+      <OkButton onClick={undefined}/>
+    </FormContainer>
+     </Container>
   )
 }
 
