@@ -15,7 +15,7 @@ type Props = {}
 
 type Ingredient = {name:string, measure_unit: string}
 
-type RecipeDetailsType = {_id:string, title:string, description:string, author:string, username: string, time:number, tags: [string], ingredients: [Ingredient] }
+type RecipeDetailsType = {_id:string, title:string, description:string, author:string, username: string, time:number, tags: [string], ingredients: [Ingredient], ingredient: any }
 
 
 function RecipeDetailPage(props: Props)  {
@@ -26,6 +26,7 @@ function RecipeDetailPage(props: Props)  {
   console.log(params)
 
   const tagItems = recipeDetails?.tags.map(tag => <TagDiv>{tag}</TagDiv>)
+  // const ingredientItems = recipeDetails?.ingredients.map(ingredient => <TagDiv>{ingredient.name}+" "+{ingredient.measure_unit}</TagDiv>)
 
   useEffect(() => {
     const loadRecipeDetails = async () => {
@@ -73,7 +74,7 @@ function RecipeDetailPage(props: Props)  {
 
           <h4>Ingredients:</h4>
           <RecipeDetailGrayDiv>
-            <DarkText>Flour</DarkText>
+            {/* <DarkText>{recipeDetails?.ingredient.name}</DarkText> */}
             <DarkText>100</DarkText>
             <DarkText>g</DarkText>
           </RecipeDetailGrayDiv>
